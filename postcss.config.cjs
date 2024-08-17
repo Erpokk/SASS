@@ -3,6 +3,6 @@ module.exports = {
     require("postcss-sort-media-queries")({
       sort: "mobile-first", // default value
     }),
-    require("autoprefixer"),
+    // require("autoprefixer"),
   ],
 };
