@@ -1,0 +1,23 @@
+@use '../../../utils/functions' as fn;
+
+@if index($btn-types, danger) {
+    /* == Danger == */
+    .btn--danger {
+        background-color: fn.get-color('danger');
+
+        &:active {
+            background-color: darken(fn.get-color('danger'), 10%);
+        }
+
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                background-color: lighten(fn.get-color('danger'), 10%);
+            }
+        }
+
+        &[disabled] {
+            border-color: fn.get-color('light-secondary');
+        }
+    }
+}

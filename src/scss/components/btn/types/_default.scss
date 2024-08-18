@@ -1,0 +1,25 @@
+@use '../../../utils/functions' as fn;
+
+@if index($btn-types, default) {
+
+    /* == Default == */
+    .btn--default {
+        background-color: fn.get-color('light-tertiary');
+
+        &:active {
+            background-color: darken(fn.get-color('light-tertiary'), 10%);
+        }
+
+        @media (hover: hover) {
+
+            &:hover,
+            &:focus {
+                background-color: lighten(fn.get-color('light-tertiary'), 10%);
+            }
+        }
+
+        &[disabled] {
+            background-color: fn.get-color('light-secondary');
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@use '../../../utils/functions' as fn;
+@if index($btn-types, info) {
+
+    /* == Info == */
+    .btn--info {
+        background-color: fn.get-color('info');
+
+        &:active {
+            background-color: darken(fn.get-color('info'), 10%);
+        }
+
+        @media (hover: hover) {
+
+            &:hover,
+            &:focus {
+                background-color: lighten(fn.get-color('info'), 10%);
+            }
+        }
+
+        &[disabled] {
+            background-color: fn.get-color('light-secondary');
+        }
+    }
+}
