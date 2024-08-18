@@ -1,24 +1,21 @@
-@use '../../../utils/functions' as fn;
 @if index($btn-types, info) {
+  /* == Info == */
+  .btn--info {
+    background-color: #4e75ff;
 
-    /* == Info == */
-    .btn--info {
-        background-color: fn.get-color('info');
-
-        &:active {
-            background-color: darken(fn.get-color('info'), 10%);
-        }
-
-        @media (hover: hover) {
-
-            &:hover,
-            &:focus {
-                background-color: lighten(fn.get-color('info'), 10%);
-            }
-        }
-
-        &[disabled] {
-            background-color: fn.get-color('light-secondary');
-        }
+    &:active {
+      background-color: darken(#4e75ff, 10%);
     }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: lighten(#4e75ff, 10%);
+      }
+    }
+
+    &[disabled] {
+      background-color: #b5b5be;
+    }
+  }
 }

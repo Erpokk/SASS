@@ -4,75 +4,67 @@
 @use '../../utils/mixins' as mx;
 
 .board {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-
 .board-item {
-    @extend %section-frame;
+  @extend %section-frame;
 
-    flex-grow: 1;
+  flex-grow: 1;
 
-    display: flex;
-    justify-content: space-between;
-    gap: 43px;
+  display: flex;
+  justify-content: space-between;
+  gap: 43px;
 
-    background-color: fn.get-color('dark-tertiary');
+  background-color: fn.get-color('dark-tertiary');
 
-    @include mx.mq('xl') {
-        background-color: fn.get-color('dark-secondary');
-    }
+  @include mx.mq('xl') {
+    background-color: fn.get-color('dark-secondary');
+  }
 
-    &.hide {
-        display: none;
-    }
+  &.hide {
+    display: none;
+  }
 }
-
-.board-left {}
-
+.board-left {
+}
 .board-caption {
-    @extend %accent-text;
+  @extend %accent-text;
 
-    margin-bottom: 8px;
-    color: fn.get-color('light-primary');
+  margin-bottom: 8px;
+  color: fn.get-color('light-primary');
 }
-
 .board-details {
-    @extend %details;
+  @extend %details;
 
-    margin-bottom: 20px;
-    color: fn.get-color('light-secondary');
+  margin-bottom: 20px;
+  color: fn.get-color('light-secondary');
 }
-
-.board-coworker {}
-
+.board-coworker {
+}
 .person {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
 .person-thumb {
-    @include mx.frame(24px, $is-circle: true);
+  @include mx.frame(24px, $is-circle: true);
 }
-
-.person-avatar {}
-
+.person-avatar {
+}
 .person-caption {
-    @extend %details;
+  @extend %details;
 }
-
 .board-right {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
-
 .board-tag {
-    @extend %details;
+  @extend %details;
 
-    margin-bottom: auto;
-    text-align: right;
-    color: fn.get-color('light-secondary');
+  margin-bottom: auto;
+  text-align: right;
+  color: fn.get-color('light-secondary');
 }

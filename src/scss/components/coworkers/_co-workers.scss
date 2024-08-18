@@ -4,62 +4,62 @@
 @use '../../utils/mixins' as mx;
 
 .co-workers {
-    grid-area: co-workers;
+  grid-area: co-workers;
 
-    @include mx.mq('xl') {
-        padding: 20px;
-        background-color: fn.get-color('dark-tertiary');
-        border-radius: 12px;
-    }
+  @include mx.mq('xl') {
+    padding: 20px;
+    background-color: fn.get-color('dark-tertiary');
+    border-radius: 12px;
+  }
 }
 
 .co-workers-wrapper {
-    max-height: 388px;
-    padding: 16px;
-    margin-bottom: 40px;
+  max-height: 388px;
+  padding: 16px;
+  margin-bottom: 40px;
 
-    border-radius: 12px;
-    background-color: fn.get-color('dark-tertiary');
+  border-radius: 12px;
+  background-color: fn.get-color('dark-tertiary');
 
-    @include mx.mq('xl') {
-        max-height: 400px;
-        padding: 24px;
-        margin-bottom: 32px;
-        background-color: fn.get-color('dark-secondary');
-    }
+  @include mx.mq('xl') {
+    max-height: 400px;
+    padding: 24px;
+    margin-bottom: 32px;
+    background-color: fn.get-color('dark-secondary');
+  }
 }
 
 .co-workers-title {
-    @extend %details;
+  @extend %details;
 
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 
-    @include mx.mq('xl') {
-        margin-bottom: 36px;
-    }
+  @include mx.mq('xl') {
+    margin-bottom: 36px;
+  }
 
-    span {
-        @extend %accent-text;
-    }
+  span {
+    @extend %accent-text;
+  }
 }
 
 .co-workers-container {
-    @include mx.scroll-bar;
+  @include mx.scroll-bar;
 
-    max-height: 296px;
+  max-height: 296px;
 
-    overflow-y: auto;
+  overflow-y: auto;
 
-    @include mx.mq('lg') {
-        margin-right: -14px;
-    }
+  @include mx.mq('lg') {
+    margin-right: -14px;
+  }
 }
 
 .co-workers-board {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .co-workers-btn {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }

@@ -2,13 +2,13 @@
 
 $fonts: var.$font-weights;
 
-@each $key, $value in $fonts{
-    @font-face {
-        font-family: 'Montserrat' ;
-        src: url('../fonts/Montserrat-#{$key}.woff2') format('woff2'),
-        url('../fonts/Montserrat-#{$key}.woff') format('woff');
-        font-weight: $value;
-        font-style: normal;
-        font-display: swap;
-    }
+@each $key, $value in $fonts {
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-#{$key}.woff2') format('woff2'),
+      url('../fonts/Montserrat-#{$key}.woff') format('woff');
+    font-weight: $value;
+    font-style: normal;
+    font-display: swap;
+  }
 }

@@ -1,25 +1,21 @@
-@use '../../../utils/functions' as fn;
-
 @if index($btn-types, success) {
+  /* == Success == */
+  .btn--success {
+    background-color: #82c43c;
 
-    /* == Success == */
-    .btn--success {
-        background-color: fn.get-color('success');
-
-        &:active {
-            background-color: darken(fn.get-color('success'), 10%);
-        }
-
-        @media (hover: hover) {
-
-            &:hover,
-            &:focus {
-                background-color: lighten(fn.get-color('success'), 10%);
-            }
-        }
-
-        &[disabled] {
-            background-color: fn.get-color('light-secondary');
-        }
+    &:active {
+      background-color: darken(#82c43c, 10%);
     }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: lighten(#82c43c, 10%);
+      }
+    }
+
+    &[disabled] {
+      background-color: #b5b5be;
+    }
+  }
 }

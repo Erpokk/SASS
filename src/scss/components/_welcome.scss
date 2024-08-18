@@ -3,31 +3,33 @@
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
 
-@use 'btn/btn' as btn with ($btn-layer-spacing: 4px);
+@use 'btn/btn' as btn with (
+  $btn-layer-spacing: 4px
+);
 
 .welcome {
-    grid-area: welcome;
+  grid-area: welcome;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    row-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  row-gap: 16px;
 }
-
 .page-title {
-    &-accent {
-        @extend %section-title;
+  &-accent {
+    @extend %section-title;
 
-        display: block;
-        margin-bottom: 8px;
+    display: block;
+    margin-bottom: 8px;
 
-        color: fn.get-color('light-primary');
+    color: fn.get-color('light-primary');
 
-        @include mx.mq('lg') {
-            margin-bottom: 16px;
-        }
+    @include mx.mq('lg') {
+      margin-bottom: 16px;
     }
+  }
 }
 
-.welcome-btn {}
+.welcome-btn {
+}

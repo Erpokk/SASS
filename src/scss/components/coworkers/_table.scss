@@ -4,98 +4,98 @@
 @use '../../utils/mixins' as mx;
 
 .co-workers-table {
-    width: 100%;
+  width: 100%;
 
-    @include mx.mq('md', 'max') {
-        display: none;
+  @include mx.mq('md', 'max') {
+    display: none;
+  }
+
+  caption {
+    @extend %details;
+
+    margin-bottom: 36px;
+    color: fn.get-color('light-secondary');
+
+    span {
+      @extend %accent-text;
+    }
+  }
+
+  thead {
+    position: sticky;
+    top: -1px;
+    z-index: 100;
+    background-color: fn.get-color('dark-tertiary');
+
+    @include mx.mq('xl') {
+      background-color: fn.get-color('dark-secondary');
     }
 
-    caption {
-        @extend %details;
+    th {
+      @extend %details-accent;
 
-        margin-bottom: 36px;
-        color: fn.get-color('light-secondary');
+      position: relative;
+      padding: 12px 20px;
+      border-bottom-width: 1px;
 
-        span {
-            @extend %accent-text;
-        }
-    }
+      color: fn.get-color('light-primary');
 
-    thead {
-        position: sticky;
-        top: -1px;
-        z-index: 100;
-        background-color: fn.get-color('dark-tertiary');
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        display: block;
+        width: 100%;
+        height: 1px;
+
+        background-color: fn.get-color('light-tertiary');
 
         @include mx.mq('xl') {
-            background-color: fn.get-color('dark-secondary');
+          background-color: fn.get-color('dark-tertiary');
         }
+      }
 
-        th {
-            @extend %details-accent;
+      &:first-child {
+        text-align: center;
+      }
+    }
+  }
 
-            position: relative;
-            padding: 12px 20px;
-            border-bottom-width: 1px;
+  tbody {
+    @extend %details;
 
-            color: fn.get-color('light-primary');
+    color: fn.get-color('light-secondary');
 
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
+    td {
+      position: relative;
 
-                display: block;
-                width: 100%;
-                height: 1px;
+      padding: 16px 20px;
+      vertical-align: middle;
+      border-bottom-width: 1px;
 
-                background-color: fn.get-color('light-tertiary');
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
 
-                @include mx.mq('xl') {
-                    background-color: fn.get-color('dark-tertiary');
-                }
-            }
+        display: block;
+        width: 100%;
+        height: 1px;
 
-            &:first-child {
-                text-align: center;
-            }
+        background-color: fn.get-color('light-tertiary');
+
+        @include mx.mq('xl') {
+          background-color: fn.get-color('dark-tertiary');
         }
+      }
     }
+  }
 
-    tbody {
-        @extend %details;
-
-        color: fn.get-color('light-secondary');
-
-        td {
-            position: relative;
-
-            padding: 16px 20px;
-            vertical-align: middle;
-            border-bottom-width: 1px;
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-
-                display: block;
-                width: 100%;
-                height: 1px;
-
-                background-color: fn.get-color('light-tertiary');
-
-                @include mx.mq('xl') {
-                    background-color: fn.get-color('dark-tertiary');
-                }
-            }
-        }
-    }
-
-    .thumb {
-        @include mx.frame(24px, $is-circle: true);
-        margin: 0 auto;
-    }
+  .thumb {
+    @include mx.frame(24px, $is-circle: true);
+    margin: 0 auto;
+  }
 }

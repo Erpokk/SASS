@@ -1,25 +1,21 @@
-@use '../../../utils/functions' as fn;
-
 @if index($btn-types, default) {
+  /* == Default == */
+  .btn--default {
+    background-color: #92929d;
 
-    /* == Default == */
-    .btn--default {
-        background-color: fn.get-color('light-tertiary');
-
-        &:active {
-            background-color: darken(fn.get-color('light-tertiary'), 10%);
-        }
-
-        @media (hover: hover) {
-
-            &:hover,
-            &:focus {
-                background-color: lighten(fn.get-color('light-tertiary'), 10%);
-            }
-        }
-
-        &[disabled] {
-            background-color: fn.get-color('light-secondary');
-        }
+    &:active {
+      background-color: darken(#92929d, 10%);
     }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: lighten(#92929d, 10%);
+      }
+    }
+
+    &[disabled] {
+      background-color: #b5b5be;
+    }
+  }
 }

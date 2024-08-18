@@ -1,25 +1,21 @@
-@use '../../../utils/functions' as fn;
-
 @if index($btn-types, warning) {
+  /* == Warning == */
+  .btn--warning {
+    background-color: #a461d8;
 
-    /* == Warning == */
-    .btn--warning {
-        background-color: fn.get-color('warning');
-
-        &:active {
-            background-color: darken(fn.get-color('warning'), 10%);
-        }
-
-        @media (hover: hover) {
-
-            &:hover,
-            &:focus {
-                background-color: lighten(fn.get-color('warning'), 10%);
-            }
-        }
-
-        &[disabled] {
-            background-color: fn.get-color('light-secondary');
-        }
+    &:active {
+      background-color: darken(#a461d8, 10%);
     }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: lighten(#a461d8, 10%);
+      }
+    }
+
+    &[disabled] {
+      background-color: #b5b5be;
+    }
+  }
 }
